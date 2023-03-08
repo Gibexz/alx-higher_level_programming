@@ -2,17 +2,13 @@
 import random
 number = random.randint(-10, 10)
 
-number_abs = abs(number)
-
-last_digit = number_abs % 10
-
 end_str = ""
 
-if last_digit > 5:
-    end_str = "and is greater then 5"
-elif last_digit == 0:
-    end_str = "and is 0"
+if number > 0:
+    end_str = "is positive"
+elif number == 0:
+    end_str = "is zero"
 else:
-    end_str = "and is less than 6 and not 0"
+    end_str = "is negative"
 
-print("Last digit of {} is {} {}".format(number, last_digit, end_str))
+print("{} {}".format(number, end_str))
