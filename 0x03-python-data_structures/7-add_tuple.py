@@ -11,9 +11,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
     elif len(tuple_a) < 2:
         a0 = tuple_a[0]
     else:
-         a0 = tuple_a[0]
-         a1 = tuple_a[1]
-
+        a0 = tuple_a[0]
+        a1 = tuple_a[1]
 
     if len(tuple_b) < 1:
         pass
