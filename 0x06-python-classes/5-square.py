@@ -2,8 +2,8 @@
 """ Class Square that defines a square by
     Private instance attribute: size
     Public instance method: def my_print(self):
-        that prints in stdout the square with the character #:
-        - if size is equal to 0, print an empty line
+    that prints in stdout the square with the character #:
+    - if size is equal to 0, print an empty line
 """
 
 
