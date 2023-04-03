@@ -3,6 +3,7 @@
 This module defines an empty python class
 """
 
+
 class Rectangle():
     """
     An empty class
