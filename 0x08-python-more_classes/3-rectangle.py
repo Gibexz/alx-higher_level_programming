@@ -3,6 +3,7 @@
 This module contains a class that defines a rectangle
 """
 
+
 class Rectangle():
     """
     class that defines a rectangle
@@ -48,6 +49,13 @@ class Rectangle():
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__height * 2 + self.__width * 2)
-    
-    @classmethod
-    def print_rectangle
+
+    def __str__(self):
+        """ Return string which prints the rectangle with # """
+        if self.__width == 0 or self.__height == 0:
+            return ''
+        temp = []
+        for i in range(self.height):
+            temp.append('#' * self.width)
+            temp.append('\n')
+        return ''.join(temp)
