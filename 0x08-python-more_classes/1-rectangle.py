@@ -8,6 +8,7 @@ class Rectangle():
     class that defines a rectangle
     """
     def __init__(self, width=0, height=0):
+        """ Constructor method """
         if type(width) not in [int]:
             raise TypeError("width must be an integer")
         if width < 0:
