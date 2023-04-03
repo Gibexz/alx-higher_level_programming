@@ -54,12 +54,12 @@ class Rectangle():
         """ Return string which prints the rectangle with # """
         if self.width == 0 or self.height == 0:
             return ''
-        """
         temp = []
         for i in range(self.height):
             temp.append('#' * self.width)
             temp.append('\n')
         return ''.join(temp)
+
         """
         temp = ''
         for co in range(self.height):
@@ -68,3 +68,4 @@ class Rectangle():
             if co != self.height - 1:
                 temp += '\n'
         return temp
+        """
