@@ -63,7 +63,7 @@ class Rectangle():
         """
         temp = ''
         for co in range(self.height):
-            for ro in range(self.height):
+            for ro in range(self.width):
                 temp += '#'
             if co != self.height - 1:
                 temp += '\n'
