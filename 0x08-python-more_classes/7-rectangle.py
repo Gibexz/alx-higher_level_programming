@@ -71,7 +71,7 @@ class Rectangle():
         temp = ''
         for co in range(self.height):
             for ro in range(self.width):
-                temp += Rectangle.print_symbol
+                temp += str(Rectangle.print_symbol)
             if co != self.height - 1:
                 temp += '\n'
         return temp
