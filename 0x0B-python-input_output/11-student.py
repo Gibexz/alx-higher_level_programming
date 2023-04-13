@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module: 10-student.py
+module: 11-student.py
 """
 
 
@@ -29,3 +29,10 @@ class Student:
                 return ret
         else:
             return self.__dict__
+
+        def reload_from_json(self, json):
+            """
+            replaces all attributes of the Student instance:
+            """
+            for i in json:
+                self.__dict__[i] = json[i]
