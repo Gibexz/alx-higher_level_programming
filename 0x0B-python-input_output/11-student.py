@@ -21,7 +21,7 @@ class Student:
         with filter
         """
         if isinstance(attrs, list):
-            if all((isintance, str) for att in attrs):
+            if all(isinstance(att, str) for att in attrs):
                 ret = {}
                 for i in attrs:
                     if i in self.__dict__:
