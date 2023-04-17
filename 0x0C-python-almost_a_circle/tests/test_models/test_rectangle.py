@@ -6,6 +6,7 @@ import unittest
 from models.rectangle import Rectangle
 from models.base import Base
 
+
 class TestRectangle(unittest.TestCase):
     """
     unittest for module for rectangle class
@@ -45,7 +46,3 @@ class TestRectangle(unittest.TestCase):
         """checks if Rectangle is an of Base"""
         tes = Rectangle(1, 2)
         self.assertEqual(True, isinstance(tes, Base))
-
-
-
-

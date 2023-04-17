@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """
-module: test_base.py 
+module: test_base.py
 Unittest of base class
 """
 
 import unittest
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
     """ Unittest cases for Base class """
-    
+
     def setUp(self):
         """ Invoked for each test """
         Base._Base__nb_objects = 0

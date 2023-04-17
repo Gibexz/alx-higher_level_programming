@@ -7,8 +7,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """ 
-    Rectangle class 
+    """
+    Rectangle class
 
     args:
         width (int), height (int)
@@ -82,3 +82,30 @@ class Rectangle(Base):
         if yy < 0:
             raise ValueError("y must be >= 0")
         self.__y = yy
+
+    def area(self):
+        """Returns area of rectangle instance"""
+        return (self.width * self.height)
+
+    def display(self):
+        """Prints rectangle instance in #'s with coord in place"""
+        for i in range(self.y):
+            print("")
+        for i in range(self.height):
+            print(self.x * " ", end="")
+            print(self.width * "#")
+
+    def __str__(self):
+        """str method for the class"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
+                {self.width}/{self.height}"
+
+    def update(self, *args, **kwargs):
+        """assign arguments to the attributes"""
+        if args is not None and len(args) != 0:
+            lst_args = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, lst_args[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
