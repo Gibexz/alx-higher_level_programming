@@ -9,7 +9,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-class TestSquare(unittest.TestCase):
+class TestSquareMethods(unittest.TestCase):
     """ unittest for square class"""
     def setUp(self):
         """runs befor each test case"""

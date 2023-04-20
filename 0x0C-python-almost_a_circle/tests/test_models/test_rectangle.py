@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 from models.base import Base
 
 
-class TestRectangle(unittest.TestCase):
+class TestRectangleMethods(unittest.TestCase):
     """
     unittest for module for rectangle class
     """
