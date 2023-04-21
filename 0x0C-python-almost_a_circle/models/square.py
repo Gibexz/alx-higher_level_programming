@@ -24,8 +24,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """str method for the class"""
-        return f"[sqare] ({self.id}) {self.x}/{self.y} - \
-                {self.width}"
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     def update(self, *args, **kwargs):
         """Assigns arguments to attributes"""
