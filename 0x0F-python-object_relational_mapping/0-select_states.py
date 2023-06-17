@@ -3,6 +3,7 @@
 import MySQLdb
 import sys
 
+
 def statesList(username, password, database_name):
     """Function that prints all the states in the database"""
 
