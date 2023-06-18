@@ -22,7 +22,7 @@ def filterCities(username, password, database, name_search):
         )
 
     cur = dbconnect.cursor()
-    query = "SELECT cities.name FROM cities JOIN states ON\
+    query = "SELECT cities.name FROM cities INNER JOIN states ON\
             cities.state_id = states.id WHERE BINARY states.name = %s\
             ORDER BY cities.id ASC"
 
