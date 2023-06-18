@@ -4,11 +4,11 @@ script that lists all states with a name starting
 with N (upper N) from the database hbtn_0e_0_usa
 """
 
-import MySQLdb
 import sys
+import MySQLdb
 
 
-def listStatesN(username, password, database_name):
+def listStates(username, password, database_name):
     """ function lists all states with a name starting
         with N (upper N) from the database hbtn_0e_0_usa """
 
@@ -40,10 +40,6 @@ def listStatesN(username, password, database_name):
 
 
 if __name__ == "__main__":
-    '''username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[2]'''
     argv = sys.argv[1:]
     username, password, datab = argv
-    """runs the script"""
-    listStatesN(username, password, datab)
+    listStates(username, password, datab)
