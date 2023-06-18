@@ -36,8 +36,12 @@ def filterStates(username, password, database, name_search):
 
 
 if __name__ == "__main__":
-    user = sys.argv[1]
-    pwd = sys.argv[2]
-    db = sys.argv[3]
-    search = sys.argv[4]
-    filterStates(user, pwd, db, search)
+    argv = sys.argv[1:]
+    userr, pwdd, dbb, searchh = argv
+    '''
+    userr = sys.argv[1]
+    pwdd = sys.argv[2]
+    dbb = sys.argv[3]
+    searchh = sys.argv[4]
+    '''
+    filterStates(userr, pwdd, dbb, searchh)
