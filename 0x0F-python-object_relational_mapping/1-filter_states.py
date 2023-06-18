@@ -8,7 +8,7 @@ import sys
 import MySQLdb
 
 
-def list_states(username, password, database_name):
+def listStates(username, password, database_name):
     '''This functions prints all states in the database'''
 
     connection = MySQLdb.connect(
@@ -40,4 +40,4 @@ def list_states(username, password, database_name):
 if __name__ == "__main__":
     argv = sys.argv[1:]
     username, password, db_name = argv
-    list_states(username, password, db_name)
+    listStates(username, password, db_name)
