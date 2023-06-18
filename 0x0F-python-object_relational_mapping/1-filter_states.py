@@ -7,6 +7,7 @@ with N (upper N) from the database hbtn_0e_0_usa
 import sys
 import MySQLdb
 
+
 if __name__ == "__main__":
 
 
@@ -21,14 +22,12 @@ if __name__ == "__main__":
                 user=username,
                 passwd=password,
                 db=database_name,
-                charset="utf8",
+                charset="utf8"
             )
 
         cur = dbconnect.cursor()
 
-        query = '''
-            SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC;
-        '''
+        query = "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY states.id ASC;"
 
         cur.execute(query)
 
