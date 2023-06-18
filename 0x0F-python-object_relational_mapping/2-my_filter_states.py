@@ -1,43 +1,48 @@
 #!/usr/bin/python3
-'''
-a script that takes in an argument and displays
-all values in the states table of hbtn_0e_0_usa
-where name matches the argument.
-'''
-
+"""
+script that takes in an argument and displays all values in the
+states table of hbtn_0e_0_usa where name matches the argument
+"""
 import sys
 import MySQLdb
 
 
-def list_states(username, password, database_name, argument):
+def filterStates(username, password, database, name_search):
+    """
+    function that takes in an argument and displays all values in the
+    states table of hbtn_0e_0_usa where name matches the argument
+    """
+    dbconnect = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database,
+            charset="utf8"
+        )
 
-    connection = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=username,
-        passwd=password,
-        db=database_name,
-        charset="utf8",
-    )
+    cur = dbconnect.cursor()
+    query = "SELECT * FROM states WHERE name = '{:s}' ORDER BY states.id ASC"
 
-    cursor = connection.cursor()
+    cur.execute(query.format(name_search))
 
-    query = '''
-        SELECT * FROM states WHERE name = '{:s}' ORDER BY id ASC;
-    '''
+    states = cur.fetchall()
 
-    cursor.execute(query.format(argument))
-
-    results = cursor.fetchall()
-
-    for row in results:
+    for row in states:
         print(row)
 
-    cursor.close()
-    connection.close()
+    cur.close()
+    dbconnect.close()
 
 
 if __name__ == "__main__":
+    '''
     argv = sys.argv[1:]
-    username, password, db_name, arg = argv
-    list_states(username, password, db_name, arg)
+    userr, pwdd, dbb, searchh = argv
+    '''
+    userr = sys.argv[1]
+    pwdd = sys.argv[2]
+    dbb = sys.argv[3]
+    searchh = sys.argv[4]
+
+    filterStates(userr, pwdd, dbb, searchh)
