@@ -18,12 +18,12 @@ def listStatesN(username, password, database):
             user=username,
             passwd=password,
             db=database,
-            charset="utf8"
+            charset="utf8",
         )
 
     cur = dbconnect.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
+    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC;"
 
     cur.execute(query)
 
