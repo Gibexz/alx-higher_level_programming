@@ -37,8 +37,7 @@ def statesList(username, password, database_name):
     dbconnect.close()
 
     if __name__ == "__main__":
-        username = sys.argv[1]
-        password = sys.argv[2]
-        database_name = sys.argv[3]
+        argv = sys.argv[1:]
+        username, password, database_name = argv
 
         statesList(username, password, database_name)
