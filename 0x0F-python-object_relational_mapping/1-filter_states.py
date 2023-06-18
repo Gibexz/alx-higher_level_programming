@@ -37,9 +37,10 @@ def listStatesN(username, password, database):
 
 
 if __name__ == "__main__":
-    username = sys.argv[1]
+    '''username = sys.argv[1]
     password = sys.argv[2]
-    database = sys.argv[2]
-
+    database = sys.argv[2]'''
+    argv = sys.argv[1:]
+    username, password, database = argv
     """runs the script"""
     listStatesN(username, password, database)
