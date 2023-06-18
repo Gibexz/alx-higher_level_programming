@@ -22,9 +22,9 @@ def filterStates(username, password, database, name_search):
         )
 
     cur = dbconnect.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC"
+    query = "SELECT * FROM states WHERE name = '{:s}' ORDER BY states.id ASC"
 
-    cur.execute(query, (name_search,))
+    cur.execute(query.format(name_search))
 
     states = cur.fetchall()
 
@@ -36,6 +36,7 @@ def filterStates(username, password, database, name_search):
 
 
 if __name__ == "__main__":
+    '''
     argv = sys.argv[1:]
     userr, pwdd, dbb, searchh = argv
     '''
@@ -43,5 +44,5 @@ if __name__ == "__main__":
     pwdd = sys.argv[2]
     dbb = sys.argv[3]
     searchh = sys.argv[4]
-    '''
+
     filterStates(userr, pwdd, dbb, searchh)
