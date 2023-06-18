@@ -14,9 +14,9 @@ def statesList(username, password, database_name):
     dbconnect = MySQLdb.connect(
             host="localhost",
             port=3306,
-            user="username",
-            passwd="password",
-            db="database_name",
+            user=username,
+            passwd=password,
+            db=database_name,
             charset="utf8"
         )
 
