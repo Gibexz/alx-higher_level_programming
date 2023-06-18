@@ -22,7 +22,8 @@ def filterStates(username, password, database, name_search):
         )
 
     cur = dbconnect.cursor()
-    query = "SELECT * FROM states WHERE BINARY name = '{:s}' ORDER BY states.id ASC"
+    query = "SELECT * FROM states WHERE BINARY name = '{:s}'\
+            ORDER BY states.id ASC"
 
     cur.execute(query.format(name_search))
 
