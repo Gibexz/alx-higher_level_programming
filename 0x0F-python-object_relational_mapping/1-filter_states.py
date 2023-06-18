@@ -8,6 +8,12 @@ import sys
 import MySQLdb
 
 
+if __name__ == "__main__":
+    argv = sys.argv[1:]
+    username, password, datab = argv
+    listStates(username, password, datab)
+
+
 def listStates(username, password, database_name):
     """ function lists all states with a name starting
         with N (upper N) from the database hbtn_0e_0_usa """
@@ -39,7 +45,7 @@ def listStates(username, password, database_name):
     dbconnect.close()
 
 
-if __name__ == "__main__":
+'''if __name__ == "__main__":
     argv = sys.argv[1:]
     username, password, datab = argv
-    listStates(username, password, datab)
+    listStates(username, password, datab)'''
