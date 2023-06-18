@@ -24,7 +24,7 @@ def statesList(username, password, database_name):
     cur = dbconnect.cursor()
 
     """query to be executed in other to retrieve all states sorted by id"""
-    query = "SELECT * FROM states ORDER BY state.id ASC"
+    query = "SELECT * FROM states ORDER BY states.id ASC"
 
     cur.execute(query)
 
