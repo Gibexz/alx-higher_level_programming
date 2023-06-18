@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""
+python script that lists all states in the database
+hbtn_0e_0_usa and are sorted by id (state.id)
+"""
 import MySQLdb
 import sys
 
