@@ -23,7 +23,9 @@ def listStatesN(username, password, database):
 
     cur = dbconnect.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC;"
+    query = '''
+        SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC;
+    '''
 
     cur.execute(query)
 
