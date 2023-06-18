@@ -12,8 +12,8 @@ def listStatesN(username, password, database):
         with N (upper N) from the database hbtn_0e_0_usa """
 
     """connection to mysqlserver"""
-    dbconnect = (
-            host="local host",
+    dbconnect = MySQLdb.connect(
+            host="localhost",
             port=3306,
             user="username",
             passwd="password",
