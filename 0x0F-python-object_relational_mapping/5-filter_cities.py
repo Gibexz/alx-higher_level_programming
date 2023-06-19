@@ -28,10 +28,10 @@ def filterCities(username, password, database, name_search):
 
     cur.execute(query.format(name_search), (name_search,))
 
-    cities = cur.fetchall()
+    states = cur.fetchall()
 
-    for city in cities:
-        print(city[0], city[1], city[2])
+    for i in range(len(states)):
+        print(states[i][0], end="\n" if i == len(states) - 1 else ", ")
 
     cur.close()
     dbconnect.close()
