@@ -23,15 +23,15 @@ def filterCities(username, password, database, name_search):
 
     cur = dbconnect.cursor()
     query = "SELECT cities.name FROM cities INNER JOIN states ON\
-            cities.state_id = states.id WHERE states.name = %s\
+            cities.state_id = states.id WHERE BINARY states.name = %s\
             ORDER BY cities.id ASC"
 
     cur.execute(query.format(name_search), (name_search,))
 
-    states = cur.fetchall()
+    cities = cur.fetchall()
 
-    for i in range(len(states)):
-        print(states[i][0], end="\n" if i == len(states) - 1 else ", ")
+    for city in cities:
+        print(city[0], city[1], city[2])
 
     cur.close()
     dbconnect.close()
