@@ -25,7 +25,7 @@ if __name__ == "__main__":
     session = Session()
 
     dell = session.query(State).filter(State.name.like("%a%"))\
-                               .delete()
+                               .delete(synchronize_session='fetch')
 
     session.commit()
 
