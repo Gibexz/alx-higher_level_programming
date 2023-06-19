@@ -26,7 +26,7 @@ def filterCities(username, password, database, name_search):
             cities.state_id = states.id WHERE BINARY states.name = %s\
             ORDER BY cities.id ASC"
 
-    cur.execute(query, (name_search,))
+    cur.execute(query.format(name_search), (name_search,))
 
     states = cur.fetchall()
 
