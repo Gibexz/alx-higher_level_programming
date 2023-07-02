@@ -11,4 +11,4 @@ if __name__ == "__main__":
     req = requests.get(url)
     resp = req.headers
 
-    print(resp["X-Request-Id"])
+    print(resp.get("X-Request-Id"))
