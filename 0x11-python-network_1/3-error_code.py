@@ -11,11 +11,11 @@ if __name__ == "__main__":
     import sys
 
     url = sys.argv[1]
-    req = urllib.request.Request(url)
     try:
+        req = urllib.request.Request(url)
         with urllib.request.urlopen(req) as respon:
             content = respon.read()
         print(content.decode("utf-8"))
 
     except HTTPError as e:
-        print(f"Error: {e.code}")
+        print("Error: ", e.code)
