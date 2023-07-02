@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     url = argv[1]
     req = requests.get(url)
-    status = req.statu_code
+    status = req.status_code
 
     if status < 400:
         print(req.text)
