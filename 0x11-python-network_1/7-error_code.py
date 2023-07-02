@@ -15,4 +15,4 @@ if __name__ == "__main__":
     if status < 400:
         print(req.text)
     else:
-        print(f"Error code: {status}")
+        print("Error code: {}".format(status))
