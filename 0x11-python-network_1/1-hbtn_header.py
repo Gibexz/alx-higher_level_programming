@@ -14,4 +14,4 @@ if __name__ == "__main__":
     with urllib.request.urlopen(req) as respon:
         headers = respon.headers
 
-    print (headers["X-Request-Id"])
+    print(headers["X-Request-Id"])
