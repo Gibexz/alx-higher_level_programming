@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 """
-Python script that fetches https://alx-intranet.hbtn.io/status
+ Python script that takes in a URL, sends a request to the URL and displays
+ the value of the X-Request-Id variable found in the header of the response
 """
 
 if __name__ == "__main__":
     import urllib.request
+    import sys
 
-    url = "https://alx-intranet.hbtn.io/status"
+    url = sys.argv[1]
     req = urllib.request.Request(url)
 
     with urllib.request.urlopen(req) as respon:
-        content = respon.read()
+        headers = respon.headers
 
-    print("Body response:")
-    print(f"\t- type: {type(content)}")
-    print(f"\t- content: {content}")
-    print(f"\t- utf8 content: {content.decode('utf-8')}")
+    print (headers["X-Request-Id"])
