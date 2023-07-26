@@ -1,0 +1,26 @@
+#!/usr/bin/node
+
+const request = require('request');
+const url = process.argv[2];
+
+request.get(url, (err, response, body) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  const todos = JSON.parse(body);
+
+  const completed = {};
+  // console.log(todos.length);
+  for (let i = 1; i <= 10; i++) {
+    let n = 0;
+    for (let dos of todos) {
+      if (dos.userId === i && dos.completed === true) {
+          n++;
+      }
+      //completed[i] = n;
+    }
+    completed[i] = n;
+  }
+  console.log(completed);
+});
