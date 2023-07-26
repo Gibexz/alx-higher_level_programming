@@ -14,11 +14,11 @@ request.get(url, (err, response, body) => {
   // console.log(todos.length);
   for (let i = 1; i <= 10; i++) {
     let n = 0;
-    for (let dos of todos) {
+    for (const dos of todos) {
       if (dos.userId === i && dos.completed === true) {
-          n++;
+        n++;
       }
-      //completed[i] = n;
+      // completed[i] = n;
     }
     completed[i] = n;
   }
