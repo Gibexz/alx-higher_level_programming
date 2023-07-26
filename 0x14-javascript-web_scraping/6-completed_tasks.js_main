@@ -17,7 +17,7 @@ request(url, (err, response, body) => {
   const b = Array.from(uniqueUserIds)[0];
 
   const completed = {};
-  for (let i of uniqueUserIds) {
+  for (let i = b; i <= numUniqueUserIds; i++) {
     let n = 0;
     for (const dos of todos) {
       if (dos.userId === i && dos.completed === true) {
