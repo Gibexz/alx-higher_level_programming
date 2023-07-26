@@ -18,7 +18,7 @@ request(url, (err, response, body) => {
   for (const i of uniqueUserIds) {
     let n = 0;
     for (const dos of todos) {
-      if (dos.userId === i && dos.completed === true) {
+      if (dos.userId === i && dos.completed) {
         n++;
       }
     }
