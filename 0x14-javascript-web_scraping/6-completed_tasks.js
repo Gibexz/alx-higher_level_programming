@@ -9,9 +9,14 @@ request(url, (err, response, body) => {
     return;
   }
   const todos = JSON.parse(body);
+  const uniqueUserIds = new Set();
+  todos.forEach(entry => {
+    uniqueUserIds.add(entry.userId);
+  });
+  const numUniqueUserIds = uniqueUserIds.size;
 
   const completed = {};
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= numUniqueUserIds; i++) {
     let n = 0;
     for (const dos of todos) {
       if (dos.userId === i && dos.completed === true) {
