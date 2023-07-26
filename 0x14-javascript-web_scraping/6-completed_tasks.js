@@ -14,9 +14,10 @@ request(url, (err, response, body) => {
     uniqueUserIds.add(entry.userId);
   });
   const numUniqueUserIds = uniqueUserIds.size;
+  const b = Array.from(uniqueUserIds)[0];
 
   const completed = {};
-  for (let i = 1; i <= numUniqueUserIds; i++) {
+  for (let i = b; i <= numUniqueUserIds; i++) {
     let n = 0;
     for (const dos of todos) {
       if (dos.userId === i && dos.completed === true) {
