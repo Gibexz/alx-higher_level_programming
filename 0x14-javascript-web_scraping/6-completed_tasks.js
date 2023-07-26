@@ -13,11 +13,9 @@ request(url, (err, response, body) => {
   todos.forEach(entry => {
     uniqueUserIds.add(entry.userId);
   });
-  const numUniqueUserIds = uniqueUserIds.size;
-  const b = Array.from(uniqueUserIds)[0];
 
   const completed = {};
-  for (let i of uniqueUserIds) {
+  for (const i of uniqueUserIds) {
     let n = 0;
     for (const dos of todos) {
       if (dos.userId === i && dos.completed === true) {
