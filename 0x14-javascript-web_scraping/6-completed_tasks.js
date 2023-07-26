@@ -21,6 +21,9 @@ request(url, (err, response, body) => {
       if (dos.userId === i && dos.completed) {
         n++;
       }
+      else {
+        completed[i] = 0;
+      }
     }
     completed[i] = n;
   }
